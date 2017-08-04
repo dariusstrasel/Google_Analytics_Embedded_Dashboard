@@ -1,4 +1,4 @@
-# Google Analtics Embedded Dashboard
+# Google Analytics Embedded Dashboard
 
 To Run:
 1. Clone the repository:
