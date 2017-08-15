@@ -15,3 +15,8 @@ flask run
 ```
 
 4. Visit localhost:5000 (default settings)
+
+# Configuration Concerns:
+- AWS S3: S3 object named "google-dashboard-service-key" with a file named "key.json" File should be OAuth credentials for a service account generated from the Google API Console.
+- AWS CLI
+- Heroku (optional) 
