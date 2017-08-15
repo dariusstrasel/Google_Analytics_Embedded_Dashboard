@@ -19,6 +19,7 @@ def get_access_token():
 
     except Exception as error:
         print("Authorization to Google Analytics dashboard failed; check Oauth token or auth flow on google developer console.")
+        print("Error:", error)
         return None
 
 
