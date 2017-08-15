@@ -12,8 +12,8 @@ KEY = 'key.json'
 
 def hasAWSEnviornmentalVariables():
     """Checks the presence of AWS Credentials in OS envoirnmental variables and returns a bool if True or False."""
-    access_key = os.environ.get('ACCESS_KEY')
-    secret_key = os.environ.get('SECRET_KEY')
+    access_key = os.environ.get('AWS_ACCESS_KEY_ID')
+    secret_key = os.environ.get('AWS_SECRET_ACCESS_KEY')
 
     if access_key and secret_key:
         return True
