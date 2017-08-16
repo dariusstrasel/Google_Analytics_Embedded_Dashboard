@@ -22,11 +22,11 @@ flask run
 - Heroku (optional) 
 
 # How it works:
-1. Client connects to Flask web server (GET Request)
-2. Flask opens connection to S3; reads Google Service Account JSON key to memory
-3. Sends JSON key to Google Analytics Oauth Callback, which returns an authenticated oauth access token
-4. Flask generates a template, embedding the access token as a Javascript constant.
-5. Template authenticates to the Google Analytics API using access token 
-6. Upon success, template generates JavaScript components using Google Analytics Ebedded Dashboard API.
+1. Client connects to Flask web server (GET Request).
+2. Flask opens connection to S3 (using AWS Access Key and AWS Secret Access Key, pulled from host OS enviornment variables); reads Google Service Account JSON key to memory.
+3. Sends JSON key to Google Analytics Oauth Callback, which returns an authenticated oauth access token.
+4. Flask renders a Jinja template, embedding the access token as a Javascript constant, and serves HTML to client.
+5. Upon painting to client, HTML authenticates to the Google Analytics API using embedded access token.
+6. Upon success, template generates JavaScript components using Google Analytics Embedded Dashboard API.
 7. ???
 8. Profit!
